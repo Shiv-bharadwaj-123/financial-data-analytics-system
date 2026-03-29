@@ -15,3 +15,15 @@ def clean_data(df):
     df['date'] = pd.to_datetime(df['date'])
 
     return df
+
+def preprocess_data(df):
+    # Sort by date
+    df = df.sort_values(by='date')
+
+    # Create month column
+    df['month'] = df['date'].dt.month
+
+    # Create day index (for ML models)
+    df['day_index'] = range(len(df))
+
+    return df
