@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from scipy.stats import ttest_ind
 
 
 def basic_analysis(df):
@@ -51,3 +52,17 @@ def correlation_analysis(df):
 
     print("\n=== CORRELATION MATRIX ===")
     print(numeric_df.corr())
+
+def hypothesis_testing(df):
+    income = df[df['type'] == 'income']['amount']
+    expense = df[df['type'] == 'expense']['amount']
+
+    stat, p_value = ttest_ind(income, expense)
+
+    print("\n=== HYPOTHESIS TESTING ===")
+    print(f"P-value: {p_value}")
+
+    if p_value < 0.05:
+        print("Reject H0 → Significant difference exists")
+    else:
+        print("Fail to reject H0 → No significant difference")

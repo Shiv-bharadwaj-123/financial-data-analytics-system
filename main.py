@@ -1,5 +1,5 @@
 from utils import load_data, clean_data, preprocess_data, save_to_sql
-from analysis import basic_analysis, category_analysis, plot_expense, statistical_analysis, correlation_analysis
+from analysis import basic_analysis, category_analysis, plot_expense, statistical_analysis, correlation_analysis, hypothesis_testing
 
 df = load_data()
 df = clean_data(df)
@@ -12,6 +12,8 @@ plot_expense(df)
 
 statistical_analysis(df)
 correlation_analysis(df)
+
+hypothesis_testing(df)
 # print(df)
 # print("Data saved to SQL database successfully")
 # print("\nData Types:")
