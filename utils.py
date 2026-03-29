@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import sqlite3
 
 def load_data():
     base_path = os.path.dirname(__file__)
@@ -27,3 +28,10 @@ def preprocess_data(df):
     df['day_index'] = range(len(df))
 
     return df
+
+def save_to_sql(df):
+    conn = sqlite3.connect("finance.db")
+
+    df.to_sql("transactions", conn, if_exists="replace", index=False)
+
+    conn.close()
