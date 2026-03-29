@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 
 
-# ================= LINEAR REGRESSION =================
+# LINEAR REGRESSION
 def predict_expense(df):
     df_exp = df[df['type'] == 'expense'].copy()
 
@@ -23,7 +23,7 @@ def predict_expense(df):
     print(f"Predicted next expense: {prediction[0]:.2f}")
 
 
-# ================= LOGISTIC REGRESSION =================
+# LOGISTIC REGRESSION
 def classify_expense_risk(df):
     df_exp = df[df['type'] == 'expense'].copy()
 
@@ -45,7 +45,7 @@ def classify_expense_risk(df):
     print(f"High expense risk (1=Yes, 0=No): {prediction[0]}")
 
 
-# ================= DECISION TREE =================
+# DECISION TREE
 def decision_tree_model(df):
     df_exp = df[df['type'] == 'expense'].copy()
 

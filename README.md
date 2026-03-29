@@ -1,4 +1,4 @@
-# Financial Data Analytics & Prediction System
+# Personal and Small-Business Financial Intelligence System Using Data Analytics
 
 ## Developed By
 Rushikesh Bhujbal
