@@ -2,6 +2,7 @@
 
 ## Developed By
 Rushikesh Bhujbal
+Shiv Bharadwaj
 
 ## Description
 This project analyzes financial data using Python and visualizes insights using Power BI.
